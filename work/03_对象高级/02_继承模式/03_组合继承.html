@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>03_组合继承</title>
+    <meta charset="UTF-8">
+    <title>03_组合继承</title>
 </head>
 <body>
 <!--
@@ -12,6 +12,28 @@
 -->
 <script type="text/javascript">
 
+    var b = {
+        fn1: function (a, b) {
+            this.a = a
+            return a
+
+        }
+    }
+    //    fn1()
+    var obj = {
+        name: "tom"
+    }
+    /* function fn2() {
+
+     }*/
+    console.log(obj)
+    var rester = b.fn1.call(obj, 3, 3)
+    obj.a = 6
+    console.log(obj.a)
+
+    console.log(rester);
+
+    //    console.log(obj.fn1())
 </script>
 </body>
 </html>

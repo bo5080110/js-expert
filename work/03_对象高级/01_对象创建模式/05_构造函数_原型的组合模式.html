@@ -11,7 +11,23 @@
   * 适用场景: 需要创建多个类型确定的对象
 -->
 <script type="text/javascript">
+    /*function fn(name) {
+        this.name = name
+        return this.name
+    }
+    fn.name = "tom"
+    console.log(fn.name);*/
+    Function.prototype.str =
+    Function.prototype.fn = function () {
+        console.log("tom");
+    }
 
+//    Object.prototype.name = "TOM"
+    function foo() {
+
+    }
+    console.log(foo.__proto__.str);
+    console.log(foo.fn());
 </script>
 </body>
 </html>
