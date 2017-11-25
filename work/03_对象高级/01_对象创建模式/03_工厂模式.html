@@ -12,6 +12,34 @@
   * 问题: 对象没有一个具体的类型, 都是Object类型
 -->
 <script type="text/javascript">
+    function createp(name ,age) {
+        var p = {
+            name,
+            age,
+            setname:function (name) {
+                this.name = name
+            }
+        }
+        return p
+    }
+    var p1 = new createp("beizhiyao" , 18)
+    console.log(p1.name);
+    p1.setname("wangguobin")
+    console.log(p1.name);
+    function CreateDog(name) {
+        var d = {
+            name,
+            setname:function(name){
+                this.name = name;
+            }
+        }
+        return d
+    }
+    var d1 = new CreateDog("大黄");
+    console.log(d1.name);
+    d1.setname("旺财");
+    console.log(d1.name);
+
 </script>
 </body>
 </html>

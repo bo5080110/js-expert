@@ -13,6 +13,16 @@
   * 问题: 每个对象都有相同的数据, 浪费内存
 -->
 <script type="text/javascript">
+    function Person(name , age) {
+        this.name = name
+        this.age = age
+    }
+    Person.prototype.setname = function (name) {
+        this.name = name
+    }
+    var p1 = new Person("朱靖" , 37)
+    p1.setname("李晓雨")
+    console.log(p1.name);
 
 </script>
 </body>
